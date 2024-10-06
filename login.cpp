@@ -6,6 +6,15 @@ login::login(QWidget *parent)
     , ui(new Ui::login)
 {
     ui->setupUi(this);
+
+    if(conexao.conectar())
+    {
+        ui->label_conexao->setText("Conectado");
+    }
+    else{
+        ui->label_conexao->setText("Desconectado");
+    }
+
 }
 
 login::~login()

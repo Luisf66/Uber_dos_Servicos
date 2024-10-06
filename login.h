@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 
+#include "conexao.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class login;
@@ -19,5 +21,7 @@ public:
 
 private:
     Ui::login *ui;
+    Conexao conexao;
+    bool verifica_conexao();
 };
 #endif // LOGIN_H
