@@ -18,10 +18,16 @@ class login : public QMainWindow
 public:
     login(QWidget *parent = nullptr);
     ~login();
+    void limpar_login();
+
+private slots:
+    void on_btn_login_clicked();
 
 private:
     Ui::login *ui;
     Conexao conexao;
+    void conectar();
+    void desconectar();
     bool verifica_conexao();
 };
 #endif // LOGIN_H

@@ -18,38 +18,13 @@
 	font-family: century gothic;
 	font-size: 24px;
 }
-QWidget{
+#centralwidget{
 	background:url(:/imagem/imagens/background.png);
  	background-repeat: no-repeat;
     background-position: center;   
 }
-QFrame{
-	background: #3b3b3b;
-	border-radius:15px;
-}
-#toolButton{
-	background: transparent;
-	border-radius:30px;
-}
-QLabel{
-	color:white;
-}
-QPushButton{
-	background:#00ffff;
-	color:white;
-	border-radius:15px;
-}
-QPushButton:hover {
-	color:#333;
-	border-radius:15px;
-	background:#ffffff;
-}
-QLineEdit{
-	background:transparent;
-	border:none;
-	color:#717072;
-	border-bottom:1px solid #717072; 
-}</string>
+
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QFrame" name="frame">
@@ -71,6 +46,12 @@ QLineEdit{
     <property name="layoutDirection">
      <enum>Qt::LayoutDirection::LeftToRight</enum>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame{
+	background: #3b3b3b;
+	border-radius:15px;
+}</string>
+    </property>
     <property name="frameShape">
      <enum>QFrame::Shape::StyledPanel</enum>
     </property>
@@ -89,6 +70,11 @@ QLineEdit{
      <property name="layoutDirection">
       <enum>Qt::LayoutDirection::LeftToRight</enum>
      </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+	color:white;
+}</string>
+     </property>
      <property name="text">
       <string>LOGIN</string>
      </property>
@@ -105,8 +91,14 @@ QLineEdit{
        <height>61</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">#toolButton{
+	background: transparent;
+	border-radius:30px;
+}</string>
+     </property>
      <property name="text">
-      <string> </string>
+      <string/>
      </property>
      <property name="icon">
       <iconset resource="recursos.qrc">
@@ -128,6 +120,18 @@ QLineEdit{
        <height>41</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background:#00ffff;
+	color:white;
+	border-radius:15px;
+}
+QPushButton:hover {
+	color:#333;
+	border-radius:15px;
+	background:#ffffff;
+}</string>
+     </property>
      <property name="text">
       <string>Login</string>
      </property>
@@ -140,6 +144,14 @@ QLineEdit{
        <width>441</width>
        <height>41</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+	background:transparent;
+	border:none;
+	color:#717072;
+	border-bottom:1px solid #717072; 
+}</string>
      </property>
      <property name="text">
       <string/>
@@ -156,6 +168,14 @@ QLineEdit{
        <width>441</width>
        <height>41</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+	background:transparent;
+	border:none;
+	color:#717072;
+	border-bottom:1px solid #717072; 
+}</string>
      </property>
      <property name="text">
       <string/>
@@ -177,8 +197,12 @@ QLineEdit{
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background:#3b3b3b;
-font-size:16px;</string>
+      <string notr="true">QPushButton{
+	background:#3b3b3b;
+	font-size:16px;
+	color:white;
+	border-radius:15px;
+}</string>
      </property>
      <property name="text">
       <string>Não possui login?</string>
@@ -194,8 +218,12 @@ font-size:16px;</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background:#3b3b3b;
-font-size:16px;</string>
+      <string notr="true">QPushButton{
+	background:#3b3b3b;
+	font-size:16px;
+	color:white;
+	border-radius:15px;
+}</string>
      </property>
      <property name="text">
       <string>Esqueci a senha</string>
