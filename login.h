@@ -4,6 +4,7 @@
 #include <QMainWindow>
 
 #include "conexao.h"
+#include "usuario.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -26,6 +27,7 @@ private slots:
 private:
     Ui::login *ui;
     Conexao conexao;
+    usuario usuario;
     void conectar();
     void desconectar();
     bool verifica_conexao();

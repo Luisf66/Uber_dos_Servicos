@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>994</width>
-    <height>658</height>
+    <height>663</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,9 +19,8 @@
 	font-size: 24px;
 }
 #centralwidget{
-	background:url(:/imagem/imagens/background.png);
- 	background-repeat: no-repeat;
-    background-position: center;   
+	background:url(:/imagem/imagens/login.jpg);
+  
 }
 
 </string>
@@ -33,7 +32,7 @@
       <x>230</x>
       <y>30</y>
       <width>511</width>
-      <height>601</height>
+      <height>571</height>
      </rect>
     </property>
     <property name="font">
@@ -63,7 +62,7 @@
       <rect>
        <x>30</x>
        <y>160</y>
-       <width>471</width>
+       <width>461</width>
        <height>31</height>
       </rect>
      </property>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>usuario</class>
+ <widget class="QDialog" name="usuario">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1053</width>
+    <height>731</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">backgroud-color:#fffff;</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>261</width>
+     <height>731</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:black;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Shadow::Raised</enum>
+   </property>
+   <widget class="QLabel" name="menu_usuario">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>241</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	font-family: &quot;Times New Roman&quot;;
+    font-size: 25px;  /* Tamanho da fonte ajustado para um visual mais formal */
+    font-weight: bold; /* Pode adicionar para destacar o texto */
+    color: white; </string>
+    </property>
+    <property name="text">
+     <string>Menu Usuário</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_editar_usuario">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>490</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+
+    background-color: #18eb00;  /* Cor do fundo do botão:verde*/
+    color: white;               /* Cor do texto: branco */
+    font-family: &quot;Times New Roman&quot;;  /* Fonte formal */
+    font-size: 18px;            /* Tamanho da fonte */
+    font-weight: bold;          /* Negrito para destacar o texto */
+    border-radius: 15px;        /* Borda arredondada */
+}
+
+QPushButton:hover {
+    background-color: #007bff;  /* Cor do fundo quando o mouse está sobre o botão: azul claro */
+    color: #333333;             /* Cor do texto ao passar o mouse: cinza escuro */
+}
+
+QPushButton:pressed {
+    background-color: #003366;  /* Cor do botão ao ser pressionado: azul ainda mais escuro */
+    color: #ffffff;             /* Cor do texto ao ser pressionado: branco */
+}</string>
+    </property>
+    <property name="text">
+     <string>Editar Conta</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_excluir_usuario">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>570</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+
+    background-color: #18eb00;  /* Cor do fundo do botão:verde*/
+    color: white;               /* Cor do texto: branco */
+    font-family: &quot;Times New Roman&quot;;  /* Fonte formal */
+    font-size: 18px;            /* Tamanho da fonte */
+    font-weight: bold;          /* Negrito para destacar o texto */
+    border-radius: 15px;        /* Borda arredondada */
+}
+
+QPushButton:hover {
+    background-color: #007bff;  /* Cor do fundo quando o mouse está sobre o botão: azul claro */
+    color: #333333;             /* Cor do texto ao passar o mouse: cinza escuro */
+}
+
+QPushButton:pressed {
+    background-color: #003366;  /* Cor do botão ao ser pressionado: azul ainda mais escuro */
+    color: #ffffff;             /* Cor do texto ao ser pressionado: branco */
+}</string>
+    </property>
+    <property name="text">
+     <string>Excluir Conta</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_metodo_pagamento">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>650</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+
+    background-color: #18eb00;  /* Cor do fundo do botão:verde*/
+    color: white;               /* Cor do texto: branco */
+    font-family: &quot;Times New Roman&quot;;  /* Fonte formal */
+    font-size: 18px;            /* Tamanho da fonte */
+    font-weight: bold;          /* Negrito para destacar o texto */
+    border-radius: 15px;        /* Borda arredondada */
+}
+
+QPushButton:hover {
+    background-color: #007bff;  /* Cor do fundo quando o mouse está sobre o botão: azul claro */
+    color: #333333;             /* Cor do texto ao passar o mouse: cinza escuro */
+}
+
+QPushButton:pressed {
+    background-color: #003366;  /* Cor do botão ao ser pressionado: azul ainda mais escuro */
+    color: #ffffff;             /* Cor do texto ao ser pressionado: branco */
+}</string>
+    </property>
+    <property name="text">
+     <string>Métodos de Pagamento</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>221</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="nome_usuario">
+       <property name="styleSheet">
+        <string notr="true">	font-family: &quot;Times New Roman&quot;;
+    font-size: 15px;  /* Tamanho da fonte ajustado para um visual mais formal */
+    color: white; </string>
+       </property>
+       <property name="text">
+        <string>Nome do cidadão</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="email_usuario">
+       <property name="styleSheet">
+        <string notr="true">	font-family: &quot;Times New Roman&quot;;
+    font-size: 15px;  /* Tamanho da fonte ajustado para um visual mais formal */
+    color: white; </string>
+       </property>
+       <property name="text">
+        <string>E-mail do cidadão</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="telefone_usuario">
+       <property name="styleSheet">
+        <string notr="true">	font-family: &quot;Times New Roman&quot;;
+    font-size: 15px;  /* Tamanho da fonte ajustado para um visual mais formal */
+    color: white; </string>
+       </property>
+       <property name="text">
+        <string>Telefone</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="cpf_usuario">
+       <property name="styleSheet">
+        <string notr="true">	font-family: &quot;Times New Roman&quot;;
+    font-size: 15px;  /* Tamanho da fonte ajustado para um visual mais formal */
+    color: white; </string>
+       </property>
+       <property name="text">
+        <string>CPF</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="tipo_usuario">
+       <property name="styleSheet">
+        <string notr="true">	font-family: &quot;Times New Roman&quot;;
+    font-size: 15px;  /* Tamanho da fonte ajustado para um visual mais formal */
+    color: white; </string>
+       </property>
+       <property name="text">
+        <string>Tipo de Usuário</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="avaliacao_usuario">
+       <property name="styleSheet">
+        <string notr="true">	font-family: &quot;Times New Roman&quot;;
+    font-size: 15px;  /* Tamanho da fonte ajustado para um visual mais formal */
+    color: white; </string>
+       </property>
+       <property name="text">
+        <string>Avaliação</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>0</y>
+     <width>801</width>
+     <height>741</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:white;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Shadow::Raised</enum>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

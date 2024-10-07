@@ -25,6 +25,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${PROJECT_SOURCES}
         conexao.h
         recursos.qrc
+        usuario.h usuario.cpp usuario.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Uber_dos_Servicos APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
