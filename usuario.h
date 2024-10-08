@@ -3,6 +3,8 @@
 
 #include <QDialog>
 
+#include "variavel_global.h"
+
 namespace Ui {
 class usuario;
 }
@@ -14,6 +16,7 @@ class usuario : public QDialog
 public:
     explicit usuario(QWidget *parent = nullptr);
     ~usuario();
+    void info_user();
 
 private:
     Ui::usuario *ui;

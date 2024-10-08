@@ -4,7 +4,7 @@
 #include <QMainWindow>
 
 #include "conexao.h"
-#include "usuario.h"
+#include "variavel_global.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -15,19 +15,16 @@ QT_END_NAMESPACE
 class login : public QMainWindow
 {
     Q_OBJECT
-
 public:
     login(QWidget *parent = nullptr);
     ~login();
     void limpar_login();
-
 private slots:
     void on_btn_login_clicked();
 
 private:
     Ui::login *ui;
     Conexao conexao;
-    usuario usuario;
     void conectar();
     void desconectar();
     bool verifica_conexao();

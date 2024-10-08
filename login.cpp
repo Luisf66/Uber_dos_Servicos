@@ -3,6 +3,18 @@
 
 #include <QDebug>
 
+#include "usuario.h"
+
+QString variavel_global::nome;
+QString variavel_global::email ;
+QString variavel_global::cpf;
+QString variavel_global::senha;
+QString variavel_global::tipoStr;
+QString variavel_global::telefone;
+QDate variavel_global::dataCadastro;
+float variavel_global::mediaAvaliacao;
+bool variavel_global::logado;
+
 login::login(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::login)
@@ -25,7 +37,7 @@ void login::on_btn_login_clicked()
     conexao.conectar();
     QString nome_usuario = ui->campo_usuario->text();
     QString senha_usuario = ui->campo_senha->text();
-    bool logado = false;
+    variavel_global::logado = false;
 
     // qDebug() << "Nome: " << nome_usuario;
     // qDebug() << "Senha: " << senha_usuario;
@@ -39,29 +51,32 @@ void login::on_btn_login_clicked()
         if(query.value(1).toString() != "")
         {
             int id = query.value("id_usuario").toInt();
-            QString nome = query.value("nome").toString();
-            QString email = query.value("email").toString();
-            QString cpf = query.value("cpf").toString();
-            QString senha = query.value("senha").toString();
-            QString tipoStr = query.value("tipo_usuario").toString().trimmed();
-            QDate dataCadastro = query.value("data_cadastro").toDate();
-            QString telefone = query.value("telefone").toString();
-            float mediaAvaliacao = query.value("media_avaliacao").toFloat();
+            variavel_global::nome = query.value("nome").toString();
+            variavel_global::email = query.value("email").toString();
+            variavel_global::cpf = query.value("cpf").toString();
+            variavel_global::senha = query.value("senha").toString();
+            variavel_global::tipoStr = query.value("tipo_usuario").toString().trimmed();
+            variavel_global::dataCadastro = query.value("data_cadastro").toDate();
+            variavel_global::telefone = query.value("telefone").toString();
+            variavel_global::mediaAvaliacao = query.value("media_avaliacao").toFloat();
 
-            logado = true;
+            variavel_global::logado = true;
             QMessageBox::information(this, "Login Realizado", "Você está conectado");
-            usuario.show();
+
+            usuario user;
+            user.exec();
             this->close();
 
             // Debug para mostrar os valores obtidos
-            qDebug() << "ID:" << id;
-            qDebug() << "Nome:" << nome;
-            qDebug() << "Email:" << email;
-            qDebug() << "CPF:" << cpf;
-            qDebug() << "Tipo:" << tipoStr;
-            qDebug() << "Data de Cadastro:" << dataCadastro;
-            qDebug() << "Telefone:" << telefone;
-            qDebug() << "Média de Avaliação:" << mediaAvaliacao;
+            // qDebug() << "ID:" << id;
+            // qDebug() << "Nome:" << variavel_global::nome;
+            // qDebug() << "Email:" << variavel_global::email;
+            // qDebug() << "CPF:" << variavel_global::cpf;
+            // qDebug() << "Tipo:" << variavel_global::tipoStr;
+            // qDebug() << "Data de Cadastro:" << variavel_global::dataCadastro;
+            // qDebug() << "Telefone:" << variavel_global::telefone;
+            // qDebug() << "Média de Avaliação:" << variavel_global::mediaAvaliacao;
+            // qDebug() << "AHOY";
         }
         else{
             QMessageBox::critical(this,"Falha no Login", "Usuário ou Senha incorretos");

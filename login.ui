@@ -128,7 +128,7 @@
 QPushButton:hover {
 	color:#333;
 	border-radius:15px;
-	background:#ffffff;
+	background:white;
 }</string>
      </property>
      <property name="text">
