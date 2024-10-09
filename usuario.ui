@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1053</width>
+    <width>1058</width>
     <height>731</height>
    </rect>
   </property>
@@ -26,7 +26,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(111, 111, 111);</string>
+    <string notr="true">background-color:rgb(66, 66, 66);</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::Shape::StyledPanel</enum>
@@ -67,8 +67,8 @@
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-    background-color: rgb(80, 60, 139);  /* Cor do fundo do botão:verde*/
-    color: black;               /* Cor do texto: branco */
+   background:rgb(55, 158, 255);
+    color: white;               /* Cor do texto: branco */
     font-family: &quot;Times New Roman&quot;;  /* Fonte formal */
     font-size: 18px;            /* Tamanho da fonte */
     font-weight: bold;          /* Negrito para destacar o texto */
@@ -100,8 +100,8 @@ QPushButton:pressed {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-    background-color: rgb(80, 60, 139);  /* Cor do fundo do botão:verde*/
-    color: black;               /* Cor do texto: branco */
+    background:rgb(55, 158, 255);
+    color: white;               /* Cor do texto: branco */
     font-family: &quot;Times New Roman&quot;;  /* Fonte formal */
     font-size: 18px;            /* Tamanho da fonte */
     font-weight: bold;          /* Negrito para destacar o texto */
@@ -133,8 +133,8 @@ QPushButton:pressed {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-    background-color: rgb(80, 60, 139);  /* Cor do fundo do botão:verde*/
-    color: black;               /* Cor do texto: branco */
+    background:rgb(55, 158, 255);
+    color: white;               /* Cor do texto: branco */
     font-family: &quot;Times New Roman&quot;;  /* Fonte formal */
     font-size: 18px;            /* Tamanho da fonte */
     font-weight: bold;          /* Negrito para destacar o texto */
@@ -276,6 +276,268 @@ QPushButton:pressed {
    <property name="frameShadow">
     <enum>QFrame::Shadow::Raised</enum>
    </property>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>781</width>
+      <height>711</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page_1">
+     <widget class="QPushButton" name="btn_salvar_editar">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>470</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+   background:rgb(55, 158, 255);
+    color: white;               /* Cor do texto: branco */
+    font-family: &quot;Times New Roman&quot;;  /* Fonte formal */
+    font-size: 20px;            /* Tamanho da fonte */
+    font-weight: bold;          /* Negrito para destacar o texto */
+    border-radius: 15px;        /* Borda arredondada */
+}
+
+QPushButton:hover {
+    background-color: #007bff;  /* Cor do fundo quando o mouse está sobre o botão: azul claro */
+    color: #333333;             /* Cor do texto ao passar o mouse: cinza escuro */
+}
+
+QPushButton:pressed {
+    background-color: rgb(255, 0, 4);  /* Cor do botão ao ser pressionado: azul ainda mais escuro */
+    color: #ffffff;             /* Cor do texto ao ser pressionado: branco */
+}</string>
+      </property>
+      <property name="text">
+       <string>Salvar</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_cancelar_editar">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>470</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+   background:rgb(55, 158, 255);
+    color: white;               /* Cor do texto: branco */
+    font-family: &quot;Times New Roman&quot;;  /* Fonte formal */
+    font-size: 20px;            /* Tamanho da fonte */
+    font-weight: bold;          /* Negrito para destacar o texto */
+    border-radius: 15px;        /* Borda arredondada */
+}
+
+QPushButton:hover {
+    background-color: #007bff;  /* Cor do fundo quando o mouse está sobre o botão: azul claro */
+    color: #333333;             /* Cor do texto ao passar o mouse: cinza escuro */
+}
+
+QPushButton:pressed {
+    background-color:rgb(34, 255, 0);  /* Cor do botão ao ser pressionado: azul ainda mais escuro */
+    color: #ffffff;             /* Cor do texto ao ser pressionado: branco */
+}</string>
+      </property>
+      <property name="text">
+       <string>Cancelar</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>300</y>
+        <width>501</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLabel" name="senha_editar">
+         <property name="styleSheet">
+          <string notr="true">	font-family: &quot;Times New Roman&quot;;
+    font-size: 19px;  /* Tamanho da fonte ajustado para um visual mais formal */
+    color: black; </string>
+         </property>
+         <property name="text">
+          <string>Senha</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="campo_editar_senha">
+         <property name="styleSheet">
+          <string notr="true">QLineEdit{
+	/*background:transparent;*/
+	border:none;
+	/*color:#717072;*/
+	border-bottom:1px solid #717072; 
+}</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>200</y>
+        <width>501</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="nome_editar">
+         <property name="styleSheet">
+          <string notr="true">	font-family: &quot;Times New Roman&quot;;
+    font-size: 19px;  /* Tamanho da fonte ajustado para um visual mais formal */
+    color: black; </string>
+         </property>
+         <property name="text">
+          <string>Nome</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="campo_editar_nome">
+         <property name="styleSheet">
+          <string notr="true">QLineEdit{
+	/*background:transparent;*/
+	border:none;
+	/*color:#717072;*/
+	border-bottom:1px solid #717072; 
+}</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>250</y>
+        <width>501</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="email_editar">
+         <property name="styleSheet">
+          <string notr="true">	font-family: &quot;Times New Roman&quot;;
+    font-size: 19px;  /* Tamanho da fonte ajustado para um visual mais formal */
+    color: black; </string>
+         </property>
+         <property name="text">
+          <string>E-mail</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="campo_editar_email">
+         <property name="styleSheet">
+          <string notr="true">QLineEdit{
+	/*background:transparent;*/
+	border:none;
+	/*color:#717072;*/
+	border-bottom:1px solid #717072; 
+}</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>400</y>
+        <width>271</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="telefone_editar">
+         <property name="styleSheet">
+          <string notr="true">	font-family: &quot;Times New Roman&quot;;
+    font-size: 19px;  /* Tamanho da fonte ajustado para um visual mais formal */
+    color: black; </string>
+         </property>
+         <property name="text">
+          <string>Telefone</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="campo_editar_telefone">
+         <property name="styleSheet">
+          <string notr="true">QLineEdit{
+	/*background:transparent;*/
+	border:none;
+	/*color:#717072;*/
+	border-bottom:1px solid #717072; 
+}</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>350</y>
+        <width>291</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLabel" name="cpf_editar">
+         <property name="styleSheet">
+          <string notr="true">	font-family: &quot;Times New Roman&quot;;
+    font-size: 19px;  /* Tamanho da fonte ajustado para um visual mais formal */
+    color: black; </string>
+         </property>
+         <property name="text">
+          <string>CPF</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="campo_editar_cpf">
+         <property name="styleSheet">
+          <string notr="true">QLineEdit{
+	/*background:transparent;*/
+	border:none;
+	/*color:#717072;*/
+	border-bottom:1px solid #717072; 
+}</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2"/>
+   </widget>
   </widget>
  </widget>
  <resources/>

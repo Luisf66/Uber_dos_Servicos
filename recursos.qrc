@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/imagem">
         <file>imagens/user.png</file>
-        <file>imagens/login.jpg</file>
+        <file>imagens/fundo_login_1.jpeg</file>
+        <file>imagens/lado_login.png</file>
     </qresource>
 </RCC>

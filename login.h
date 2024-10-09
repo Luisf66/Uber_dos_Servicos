@@ -22,6 +22,8 @@ public:
 private slots:
     void on_btn_login_clicked();
 
+    void on_btn_cadastro_clicked();
+
 private:
     Ui::login *ui;
     Conexao conexao;

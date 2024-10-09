@@ -7,6 +7,7 @@
 class variavel_global {
 public:
     static bool logado;
+    static int id_usuario;
     static QString nome, email, cpf, senha, tipoStr, telefone;
     static QDate dataCadastro;
     static float mediaAvaliacao;

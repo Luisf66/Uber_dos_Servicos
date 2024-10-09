@@ -5,8 +5,9 @@
 
 #include "usuario.h"
 
+int variavel_global::id_usuario;
 QString variavel_global::nome;
-QString variavel_global::email ;
+QString variavel_global::email;
 QString variavel_global::cpf;
 QString variavel_global::senha;
 QString variavel_global::tipoStr;
@@ -50,7 +51,7 @@ void login::on_btn_login_clicked()
         query.first();
         if(query.value(1).toString() != "")
         {
-            int id = query.value("id_usuario").toInt();
+            variavel_global::id_usuario = query.value("id_usuario").toInt();
             variavel_global::nome = query.value("nome").toString();
             variavel_global::email = query.value("email").toString();
             variavel_global::cpf = query.value("cpf").toString();
@@ -64,12 +65,13 @@ void login::on_btn_login_clicked()
             QMessageBox::information(this, "Login Realizado", "Você está conectado");
 
             usuario user;
-            user.exec();
             this->close();
+            user.exec();
 
-            // Debug para mostrar os valores obtidos
-            // qDebug() << "ID:" << id;
+            // // //Debug para mostrar os valores obtidos
+            // qDebug() << "ID:" << variavel_global::id_usuario;
             // qDebug() << "Nome:" << variavel_global::nome;
+            // qDebug() << "Senha:" << variavel_global::senha;
             // qDebug() << "Email:" << variavel_global::email;
             // qDebug() << "CPF:" << variavel_global::cpf;
             // qDebug() << "Tipo:" << variavel_global::tipoStr;
@@ -86,5 +88,11 @@ void login::on_btn_login_clicked()
         QMessageBox::critical(this,"Falha no Login","Busca não Realizada");
     }
     limpar_login();
+}
+
+
+void login::on_btn_cadastro_clicked()
+{
+    qDebug() << "Chamar Tela de Cadastro";
 }
 

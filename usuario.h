@@ -3,6 +3,7 @@
 
 #include <QDialog>
 
+#include "conexao.h"
 #include "variavel_global.h"
 
 namespace Ui {
@@ -17,6 +18,9 @@ public:
     explicit usuario(QWidget *parent = nullptr);
     ~usuario();
     void info_user();
+private slots:
+    void on_btn_salvar_editar_clicked();
+    void on_btn_cancelar_editar_clicked();
 
 private:
     Ui::usuario *ui;
