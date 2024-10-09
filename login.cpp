@@ -22,12 +22,15 @@ login::login(QWidget *parent)
     , ui(new Ui::login)
 {
     ui->setupUi(this);
+    variavel_global::logado = false;
+    conexao.conectar();
 }
 
 login::~login()
 {
     delete ui;
 }
+
 void login::limpar_login(){
     ui->campo_usuario->clear();
     ui->campo_senha->clear();
@@ -36,20 +39,21 @@ void login::limpar_login(){
 
 void login::on_btn_login_clicked()
 {
-    conexao.conectar();
     QString nome_usuario = ui->campo_usuario->text();
     QString senha_usuario = ui->campo_senha->text();
-    variavel_global::logado = false;
 
     // qDebug() << "Nome: " << nome_usuario;
     // qDebug() << "Senha: " << senha_usuario;
     QSqlQuery query;
-    QString busca = "SELECT * FROM usuario WHERE nome ='"+nome_usuario+"' AND senha='"+senha_usuario+"'";
-    query.prepare(busca);
-    //qDebug() << "Busca: " << busca;
+    query.prepare("SELECT * FROM usuario WHERE nome ='"+nome_usuario+"' AND senha='"+senha_usuario+"'");
+
     if(query.exec())
     {
         query.first();
+        // qDebug() << "query.first() retornou true. Usuário encontrado:";
+        // qDebug() << "ID:" << query.value("id_usuario").toInt();
+        // qDebug() << "Nome:" << query.value("nome").toString();
+        // qDebug() << "Email:" << query.value("email").toString();
         if(query.value(1).toString() != "")
         {
             variavel_global::id_usuario = query.value("id_usuario").toInt();
@@ -87,6 +91,7 @@ void login::on_btn_login_clicked()
     }
     else{
         QMessageBox::critical(this,"Falha no Login","Busca não Realizada");
+        qDebug() << "Erro ao executar a query:" << query.lastError().text();
     }
     limpar_login();
 }

@@ -1,6 +1,7 @@
 #include "usuario.h"
 #include "ui_usuario.h"
 
+
 usuario::usuario(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::usuario)
@@ -68,5 +69,24 @@ void usuario::on_btn_cancelar_editar_clicked()
     ui->campo_editar_cpf->clear();
     ui->campo_editar_telefone->clear();
     ui->campo_editar_nome->setFocus();
+}
+
+
+void usuario::on_btn_excluir_usuario_clicked()
+{
+    QMessageBox::StandardButton opcao = QMessageBox::question(this,"Excluir conta","Você deseja deletar sua conta permanentemente?",QMessageBox::Yes|QMessageBox::No);
+    if(opcao == QMessageBox::Yes)
+    {
+        QSqlQuery query;
+        query.prepare("DELETE FROM usuario WHERE id_usuario ="+QString::number(variavel_global::id_usuario));
+        if(query.exec())
+        {
+            QMessageBox::information(this,"Excluir conta","Seus dados foram deletados");
+            this->close();
+        }
+    }
+    else{
+        QMessageBox::information(this,"Excluir conta", "Conta não deletada");
+    }
 }
 

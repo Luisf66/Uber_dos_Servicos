@@ -22,6 +22,8 @@ private slots:
     void on_btn_salvar_editar_clicked();
     void on_btn_cancelar_editar_clicked();
 
+    void on_btn_excluir_usuario_clicked();
+
 private:
     Ui::usuario *ui;
 };
