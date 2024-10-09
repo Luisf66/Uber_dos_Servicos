@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>cadastrar_usuario</class>
+ <widget class="QDialog" name="cadastrar_usuario">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>840</width>
+    <height>621</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background:white;</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>200</y>
+     <width>501</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <item>
+     <widget class="QLabel" name="senha_cadastro">
+      <property name="styleSheet">
+       <string notr="true">	font-family: &quot;Times New Roman&quot;;
+    font-size: 19px;  /* Tamanho da fonte ajustado para um visual mais formal */
+    color: black; </string>
+      </property>
+      <property name="text">
+       <string>Senha</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="campo_cadastrar_senha">
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+	/*background:transparent;*/
+	border:none;
+	/*color:#717072;*/
+	border-bottom:1px solid #717072; 
+}</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>150</y>
+     <width>501</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QLabel" name="email_cadastro">
+      <property name="styleSheet">
+       <string notr="true">	font-family: &quot;Times New Roman&quot;;
+    font-size: 19px;  /* Tamanho da fonte ajustado para um visual mais formal */
+    color: black; </string>
+      </property>
+      <property name="text">
+       <string>E-mail</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="campo_cadastrar_email">
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+	/*background:transparent;*/
+	border:none;
+	/*color:#717072;*/
+	border-bottom:1px solid #717072; 
+}</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="btn_cancelar_cadastrar">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>440</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+   background:rgb(55, 158, 255);
+    color: white;               /* Cor do texto: branco */
+    font-family: &quot;Times New Roman&quot;;  /* Fonte formal */
+    font-size: 20px;            /* Tamanho da fonte */
+    font-weight: bold;          /* Negrito para destacar o texto */
+    border-radius: 15px;        /* Borda arredondada */
+}
+
+QPushButton:hover {
+    background-color: #007bff;  /* Cor do fundo quando o mouse está sobre o botão: azul claro */
+    color: #333333;             /* Cor do texto ao passar o mouse: cinza escuro */
+}
+
+QPushButton:pressed {
+    background-color:rgb(34, 255, 0);  /* Cor do botão ao ser pressionado: azul ainda mais escuro */
+    color: #ffffff;             /* Cor do texto ao ser pressionado: branco */
+}</string>
+   </property>
+   <property name="text">
+    <string>Cancelar</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>370</y>
+     <width>271</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <widget class="QLabel" name="telefone_cadastro">
+      <property name="styleSheet">
+       <string notr="true">	font-family: &quot;Times New Roman&quot;;
+    font-size: 19px;  /* Tamanho da fonte ajustado para um visual mais formal */
+    color: black; </string>
+      </property>
+      <property name="text">
+       <string>Telefone</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="campo_cadastrar_telefone">
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+	/*background:transparent;*/
+	border:none;
+	/*color:#717072;*/
+	border-bottom:1px solid #717072; 
+}</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="btn_salvar_cadastrar">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>440</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+   background:rgb(55, 158, 255);
+    color: white;               /* Cor do texto: branco */
+    font-family: &quot;Times New Roman&quot;;  /* Fonte formal */
+    font-size: 20px;            /* Tamanho da fonte */
+    font-weight: bold;          /* Negrito para destacar o texto */
+    border-radius: 15px;        /* Borda arredondada */
+}
+
+QPushButton:hover {
+    background-color: #007bff;  /* Cor do fundo quando o mouse está sobre o botão: azul claro */
+    color: #333333;             /* Cor do texto ao passar o mouse: cinza escuro */
+}
+
+QPushButton:pressed {
+    background-color: rgb(255, 0, 4);  /* Cor do botão ao ser pressionado: azul ainda mais escuro */
+    color: #ffffff;             /* Cor do texto ao ser pressionado: branco */
+}</string>
+   </property>
+   <property name="text">
+    <string>Salvar</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_4">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>100</y>
+     <width>501</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <item>
+     <widget class="QLabel" name="nome_cadastro">
+      <property name="styleSheet">
+       <string notr="true">	font-family: &quot;Times New Roman&quot;;
+    font-size: 19px;  /* Tamanho da fonte ajustado para um visual mais formal */
+    color: black; </string>
+      </property>
+      <property name="text">
+       <string>Nome</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="campo_cadastrar_nome">
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+	/*background:transparent;*/
+	border:none;
+	/*color:#717072;*/
+	border-bottom:1px solid #717072; 
+}</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_5">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>320</y>
+     <width>291</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_6">
+    <item>
+     <widget class="QLabel" name="cpf_cadastro">
+      <property name="styleSheet">
+       <string notr="true">	font-family: &quot;Times New Roman&quot;;
+    font-size: 19px;  /* Tamanho da fonte ajustado para um visual mais formal */
+    color: black; </string>
+      </property>
+      <property name="text">
+       <string>CPF</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="campo_cadastrar_cpf">
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+	/*background:transparent;*/
+	border:none;
+	/*color:#717072;*/
+	border-bottom:1px solid #717072; 
+}</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_6">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>250</y>
+     <width>295</width>
+     <height>59</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_7">
+    <item>
+     <widget class="QLabel" name="cpf_cadastro_2">
+      <property name="styleSheet">
+       <string notr="true">	font-family: &quot;Times New Roman&quot;;
+    font-size: 19px;  /* Tamanho da fonte ajustado para um visual mais formal */
+    color: black; </string>
+      </property>
+      <property name="text">
+       <string>Tipo de Usuário</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QRadioButton" name="rb_prestador">
+        <property name="text">
+         <string>Prestador de Serviço</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="rb_usuario">
+        <property name="text">
+         <string>Usuário comum</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

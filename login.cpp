@@ -4,6 +4,7 @@
 #include <QDebug>
 
 #include "usuario.h"
+#include "cadastrar_usuario.h"
 
 int variavel_global::id_usuario;
 QString variavel_global::nome;
@@ -93,6 +94,7 @@ void login::on_btn_login_clicked()
 
 void login::on_btn_cadastro_clicked()
 {
-    qDebug() << "Chamar Tela de Cadastro";
+    cadastrar_usuario cadastro;
+    cadastro.exec();
 }
 

@@ -27,6 +27,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         recursos.qrc
         usuario.h usuario.cpp usuario.ui
         variavel_global.h
+        cadastrar_usuario.h cadastrar_usuario.cpp cadastrar_usuario.ui
 
 
     )
