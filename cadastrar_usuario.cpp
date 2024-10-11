@@ -47,3 +47,9 @@ void cadastrar_usuario::on_btn_salvar_cadastrar_clicked()
     }
 }
 
+
+void cadastrar_usuario::on_btn_cancelar_cadastrar_clicked()
+{
+    close();
+}
+

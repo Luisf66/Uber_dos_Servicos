@@ -15,6 +15,9 @@ public:
     explicit servico(QWidget *parent = nullptr);
     ~servico();
 
+private slots:
+    void on_btn_menu_usuario_clicked();
+
 private:
     Ui::servico *ui;
 };

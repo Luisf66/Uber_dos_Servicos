@@ -21,6 +21,8 @@ public:
 private slots:
     void on_btn_salvar_cadastrar_clicked();
 
+    void on_btn_cancelar_cadastrar_clicked();
+
 private:
     Ui::cadastrar_usuario *ui;
 };

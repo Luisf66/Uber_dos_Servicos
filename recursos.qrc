@@ -3,5 +3,11 @@
         <file>imagens/user.png</file>
         <file>imagens/fundo_login_1.jpeg</file>
         <file>imagens/lado_login.png</file>
+        <file>imagens/editar_conta.png</file>
+        <file>imagens/info.png</file>
+        <file>imagens/menu_servico.png</file>
+        <file>imagens/menu_usuario.png</file>
+        <file>imagens/pagamento.png</file>
+        <file>imagens/remover_conta.png</file>
     </qresource>
 </RCC>

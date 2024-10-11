@@ -24,6 +24,8 @@ private slots:
 
     void on_btn_excluir_usuario_clicked();
 
+    void on_btn_menu_servico_clicked();
+
 private:
     Ui::usuario *ui;
 };

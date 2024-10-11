@@ -1,6 +1,7 @@
 #include "usuario.h"
 #include "ui_usuario.h"
 
+#include "servico.h"
 
 usuario::usuario(QWidget *parent)
     : QDialog(parent)
@@ -88,5 +89,13 @@ void usuario::on_btn_excluir_usuario_clicked()
     else{
         QMessageBox::information(this,"Excluir conta", "Conta não deletada");
     }
+}
+
+
+void usuario::on_btn_menu_servico_clicked()
+{
+    servico trabalho;
+    this->close();
+    trabalho.exec();
 }
 
