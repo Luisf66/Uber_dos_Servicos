@@ -26,6 +26,14 @@ private slots:
 
     void on_btn_menu_servico_clicked();
 
+    void on_btn_editar_usuario_clicked();
+
+    void on_btn_metodo_pagamento_clicked();
+
+    void on_btn_salvar_editar_3_clicked();
+
+    void on_btn_cancelar_editar_3_clicked();
+
 private:
     Ui::usuario *ui;
 };

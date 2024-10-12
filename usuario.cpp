@@ -9,6 +9,8 @@ usuario::usuario(QWidget *parent)
 {
     ui->setupUi(this);
     info_user();
+    connect(ui->btn_editar_usuario, &QPushButton::clicked, this, &usuario::on_btn_editar_usuario_clicked);
+    connect(ui->btn_metodo_pagamento, &QPushButton::clicked, this, &usuario::on_btn_metodo_pagamento_clicked);
 }
 
 usuario::~usuario()
@@ -97,5 +99,51 @@ void usuario::on_btn_menu_servico_clicked()
     servico trabalho;
     this->close();
     trabalho.exec();
+}
+
+
+void usuario::on_btn_editar_usuario_clicked()
+{
+    // Muda o widget visível no QStackedWidget para a página de editar (índice 0)
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+
+void usuario::on_btn_metodo_pagamento_clicked()
+{
+    // Muda o widget visível no QStackedWidget para a página de pagamento (índice 1)
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+
+void usuario::on_btn_salvar_editar_3_clicked()
+{
+    QString nome_titular = ui->campo_nome_titular->text();
+    QString numero_cartao = ui->campo_numero_cartao->text();
+    QString cod_seguranca = ui->campo_codigo_seguranca->text();
+    QString validade = ui->campo_validade->text();
+
+    QSqlQuery query;
+    query.prepare("INSERT INTO pagamento (id_usuario, nome_titular, numero_cartao, validade, cod_seguranca) "
+                  "VALUES ( '"+QString::number(variavel_global::id_usuario)+"' , '"+nome_titular+"', '"+numero_cartao+"',"
+                  " '"+validade+"', '"+cod_seguranca+"' )");
+    if(query.exec())
+    {
+        QMessageBox::information(this, "Cadastro Realizado", "Dados do Cartão Salvo com Sucesso");
+        on_btn_cancelar_editar_3_clicked();
+    }
+    else{
+        QMessageBox::critical(this,"Operação não Realizada","Dados não cadastrados");
+    }
+}
+
+
+void usuario::on_btn_cancelar_editar_3_clicked()
+{
+    ui->campo_nome_titular->clear();
+    ui->campo_numero_cartao->clear();
+    ui->campo_codigo_seguranca->clear();
+    ui->campo_validade->clear();
+    ui->campo_numero_cartao->setFocus();
 }
 

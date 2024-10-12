@@ -31,28 +31,6 @@
    <property name="frameShadow">
     <enum>QFrame::Shadow::Raised</enum>
    </property>
-   <widget class="QLabel" name="menu_servico">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>0</y>
-      <width>241</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">	font-family: &quot;Times New Roman&quot;;
-    font-size: 25px;  /* Tamanho da fonte ajustado para um visual mais formal */
-    font-weight: bold; /* Pode adicionar para destacar o texto */
-    color: white; </string>
-    </property>
-    <property name="text">
-     <string>Menu Serviços</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
-    </property>
-   </widget>
    <widget class="QPushButton" name="btn_contratar">
     <property name="geometry">
      <rect>
@@ -284,34 +262,107 @@ QPushButton:pressed {
      <string>Cancelar</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btn_menu_usuario">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>60</y>
-      <width>61</width>
+      <x>10</x>
+      <y>10</y>
+      <width>241</width>
       <height>51</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">#btn_menu_servico{
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="btn_menu_servico">
+       <property name="styleSheet">
+        <string notr="true">#btn_menu_servico{
 	background: transparent;
 	border-radius: 30px;
 }</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="recursos.qrc">
+         <normaloff>:/imagem/imagens/menu_servico.png</normaloff>:/imagem/imagens/menu_servico.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="menu_servico">
+       <property name="styleSheet">
+        <string notr="true">	font-family: &quot;Times New Roman&quot;;
+    font-size: 25px;  /* Tamanho da fonte ajustado para um visual mais formal */
+    font-weight: bold; /* Pode adicionar para destacar o texto */
+    color:white; </string>
+       </property>
+       <property name="text">
+        <string>Menu Serviços</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>241</width>
+      <height>51</height>
+     </rect>
     </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="recursos.qrc">
-      <normaloff>:/imagem/imagens/menu_usuario.png</normaloff>:/imagem/imagens/menu_usuario.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>50</width>
-      <height>50</height>
-     </size>
-    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="btn_menu_usuario">
+       <property name="styleSheet">
+        <string notr="true">#btn_menu_usuario{
+	background: transparent;
+	border-radius: 30px;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="recursos.qrc">
+         <normaloff>:/imagem/imagens/menu_usuario.png</normaloff>:/imagem/imagens/menu_usuario.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>35</width>
+         <height>35</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="menu_usuario">
+       <property name="styleSheet">
+        <string notr="true">	font-family: &quot;Times New Roman&quot;;
+    font-size: 25px;  /* Tamanho da fonte ajustado para um visual mais formal */
+    font-weight: bold; /* Pode adicionar para destacar o texto */
+    color:black; </string>
+       </property>
+       <property name="text">
+        <string>Menu Usuário</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QStackedWidget" name="stackedWidget">
@@ -325,6 +376,9 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">background:white;</string>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
    </property>
    <widget class="QWidget" name="page"/>
    <widget class="QWidget" name="page_3"/>
