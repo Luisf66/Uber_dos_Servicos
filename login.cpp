@@ -13,6 +13,7 @@ QString variavel_global::cpf;
 QString variavel_global::senha;
 QString variavel_global::tipoStr;
 QString variavel_global::telefone;
+QString variavel_global::ativo;
 QDate variavel_global::dataCadastro;
 float variavel_global::mediaAvaliacao;
 bool variavel_global::logado;
@@ -45,7 +46,7 @@ void login::on_btn_login_clicked()
     // qDebug() << "Nome: " << nome_usuario;
     // qDebug() << "Senha: " << senha_usuario;
     QSqlQuery query;
-    query.prepare("SELECT * FROM usuario WHERE nome ='"+nome_usuario+"' AND senha='"+senha_usuario+"'");
+    query.prepare("SELECT * FROM usuario WHERE nome ='"+nome_usuario+"' AND senha='"+senha_usuario+"' AND ativo = '1'");
 
     if(query.exec())
     {

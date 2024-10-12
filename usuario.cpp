@@ -81,7 +81,7 @@ void usuario::on_btn_excluir_usuario_clicked()
     if(opcao == QMessageBox::Yes)
     {
         QSqlQuery query;
-        query.prepare("DELETE FROM usuario WHERE id_usuario ="+QString::number(variavel_global::id_usuario));
+        query.prepare("UPDATE usuario SET ativo = '0' WHERE id_usuario ="+QString::number(variavel_global::id_usuario));
         if(query.exec())
         {
             QMessageBox::information(this,"Excluir conta","Seus dados foram deletados");
@@ -92,7 +92,6 @@ void usuario::on_btn_excluir_usuario_clicked()
         QMessageBox::information(this,"Excluir conta", "Conta não deletada");
     }
 }
-
 
 void usuario::on_btn_menu_servico_clicked()
 {
