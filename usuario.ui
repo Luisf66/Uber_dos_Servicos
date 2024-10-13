@@ -38,7 +38,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>530</y>
+      <y>490</y>
       <width>211</width>
       <height>41</height>
      </rect>
@@ -75,7 +75,7 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>590</y>
+      <y>540</y>
       <width>211</width>
       <height>41</height>
      </rect>
@@ -112,7 +112,7 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>650</y>
+      <y>590</y>
       <width>211</width>
       <height>41</height>
      </rect>
@@ -377,6 +377,43 @@ QPushButton:pressed {
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QPushButton" name="btn_endereco">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>640</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background:rgb(55, 158, 255);
+    color: white;               /* Cor do texto: branco */
+    font-family: &quot;Times New Roman&quot;;  /* Fonte formal */
+    font-size: 18px;            /* Tamanho da fonte */
+    font-weight: bold;          /* Negrito para destacar o texto */
+    border-radius: 15px;        /* Borda arredondada */
+}
+
+QPushButton:hover {
+    background-color: #007bff;  /* Cor do fundo quando o mouse está sobre o botão: azul claro */
+    color: #333333;             /* Cor do texto ao passar o mouse: cinza escuro */
+}
+
+QPushButton:pressed {
+    background-color: #003366;  /* Cor do botão ao ser pressionado: azul ainda mais escuro */
+    color: #ffffff;             /* Cor do texto ao ser pressionado: branco */
+}</string>
+    </property>
+    <property name="text">
+     <string> Endereço</string>
+    </property>
+    <property name="icon">
+     <iconset theme="QIcon::ThemeIcon::GoHome" resource="recursos.qrc">
+      <normaloff>:/imagem/imagens/pagamento.png</normaloff>:/imagem/imagens/pagamento.png</iconset>
+    </property>
    </widget>
   </widget>
   <widget class="QFrame" name="frame_2">

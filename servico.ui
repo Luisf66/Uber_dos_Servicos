@@ -34,9 +34,9 @@
    <widget class="QPushButton" name="btn_contratar">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>9</x>
       <y>140</y>
-      <width>221</width>
+      <width>121</width>
       <height>41</height>
      </rect>
     </property>
@@ -67,9 +67,9 @@ QPushButton:pressed {
    <widget class="QPushButton" name="btn_verificar_status">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>260</y>
-      <width>221</width>
+      <x>10</x>
+      <y>190</y>
+      <width>241</width>
       <height>41</height>
      </rect>
     </property>
@@ -100,9 +100,9 @@ QPushButton:pressed {
    <widget class="QPushButton" name="btn_cadastrar_servico">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>480</y>
-      <width>221</width>
+      <x>9</x>
+      <y>530</y>
+      <width>121</width>
       <height>41</height>
      </rect>
     </property>
@@ -133,9 +133,9 @@ QPushButton:pressed {
    <widget class="QPushButton" name="btn_editar_servico">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>540</y>
-      <width>221</width>
+      <x>134</x>
+      <y>530</y>
+      <width>121</width>
       <height>41</height>
      </rect>
     </property>
@@ -166,9 +166,9 @@ QPushButton:pressed {
    <widget class="QPushButton" name="btn_ver_servicos">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>660</y>
-      <width>221</width>
+      <x>10</x>
+      <y>630</y>
+      <width>241</width>
       <height>41</height>
      </rect>
     </property>
@@ -199,9 +199,9 @@ QPushButton:pressed {
    <widget class="QPushButton" name="btn_remover_servico">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>600</y>
-      <width>221</width>
+      <x>10</x>
+      <y>580</y>
+      <width>241</width>
       <height>41</height>
      </rect>
     </property>
@@ -232,9 +232,9 @@ QPushButton:pressed {
    <widget class="QPushButton" name="btn_cancelar">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>200</y>
-      <width>221</width>
+      <x>132</x>
+      <y>140</y>
+      <width>121</width>
       <height>41</height>
      </rect>
     </property>
@@ -262,7 +262,7 @@ QPushButton:pressed {
      <string>Cancelar</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -313,7 +313,7 @@ QPushButton:pressed {
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -378,9 +378,60 @@ QPushButton:pressed {
     <string notr="true">background:white;</string>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
-   <widget class="QWidget" name="page"/>
+   <widget class="QWidget" name="page">
+    <widget class="QPushButton" name="btn_buscar_servico">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>50</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+   background:rgb(66, 66, 66);
+    color: white;               /* Cor do texto: branco */
+    font-family: &quot;Times New Roman&quot;;  /* Fonte formal */
+    font-size: 18px;            /* Tamanho da fonte */
+    border-radius: 15px;        /* Borda arredondada */
+}
+
+QPushButton:hover {
+    background-color: #007bff;  /* Cor do fundo quando o mouse está sobre o botão: azul claro */
+    color: #333333;             /* Cor do texto ao passar o mouse: cinza escuro */
+}
+
+QPushButton:pressed {
+    background-color: #003366;  /* Cor do botão ao ser pressionado: azul ainda mais escuro */
+    color: #ffffff;             /* Cor do texto ao ser pressionado: branco */
+}</string>
+     </property>
+     <property name="text">
+      <string>Buscar Serviço</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="campo_buscar_servico">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>56</y>
+       <width>621</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+	/*background:transparent;*/
+	border:none;
+	/*color:#717072;*/
+	border-bottom:1px solid #717072; 
+}</string>
+     </property>
+    </widget>
+   </widget>
    <widget class="QWidget" name="page_3"/>
   </widget>
  </widget>
