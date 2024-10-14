@@ -9,5 +9,6 @@
         <file>imagens/menu_usuario.png</file>
         <file>imagens/pagamento.png</file>
         <file>imagens/remover_conta.png</file>
+        <file>imagens/chip.png</file>
     </qresource>
 </RCC>
