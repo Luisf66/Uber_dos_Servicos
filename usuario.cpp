@@ -11,6 +11,7 @@ usuario::usuario(QWidget *parent)
     info_user();
     connect(ui->btn_editar_usuario, &QPushButton::clicked, this, &usuario::on_btn_editar_usuario_clicked);
     connect(ui->btn_metodo_pagamento, &QPushButton::clicked, this, &usuario::on_btn_metodo_pagamento_clicked);
+    connect(ui->btn_endereco, &QPushButton::clicked, this, &usuario::on_btn_endereco_clicked);
 }
 
 usuario::~usuario()
@@ -103,14 +104,14 @@ void usuario::on_btn_menu_servico_clicked()
 
 void usuario::on_btn_editar_usuario_clicked()
 {
-    // Muda o widget visível no QStackedWidget para a página de editar (índice 0)
+    // Muda o widget visível no QStackedWidget para a página de editar (índice 1)
     ui->stackedWidget->setCurrentIndex(0);
 }
 
 
 void usuario::on_btn_metodo_pagamento_clicked()
 {
-    // Muda o widget visível no QStackedWidget para a página de pagamento (índice 1)
+    // Muda o widget visível no QStackedWidget para a página de pagamento (índice 2)
     ui->stackedWidget->setCurrentIndex(1);
 }
 
@@ -144,5 +145,12 @@ void usuario::on_btn_cancelar_editar_3_clicked()
     ui->campo_codigo_seguranca->clear();
     ui->campo_validade->clear();
     ui->campo_numero_cartao->setFocus();
+}
+
+
+void usuario::on_btn_endereco_clicked()
+{
+    // Muda o widget visível no QStackedWidget para a página de endereço (índice 3)
+    ui->stackedWidget->setCurrentIndex(2);
 }
 

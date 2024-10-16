@@ -34,6 +34,8 @@ private slots:
 
     void on_btn_cancelar_editar_3_clicked();
 
+    void on_btn_endereco_clicked();
+
 private:
     Ui::usuario *ui;
 };

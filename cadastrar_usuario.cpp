@@ -29,21 +29,26 @@ void cadastrar_usuario::on_btn_salvar_cadastrar_clicked()
     else{
         variavel_global::tipoStr = "C";
     }
-
     QSqlQuery query;
-    query.prepare("INSERT INTO usuario (nome, email, senha, telefone, cpf, tipo_usuario) values "
-                "( '"+variavel_global::nome+"', '"+variavel_global::email+"', '"+variavel_global::senha+"',"
-                " '"+variavel_global::telefone+"', '"+variavel_global::cpf+"', '"+variavel_global::tipoStr+"')");
-    if(query.exec())
-    {
-        QMessageBox::information(this,"Usuário Cadastrado","Seus dados foram cadastrados");
+    query.prepare("INSERT INTO usuario (nome, email, senha, telefone, cpf, tipo_usuario, ativo) "
+                  "VALUES (:nome, :email, :senha, :telefone, :cpf, :tipo_usuario, '1')");
+
+    query.bindValue(":nome", variavel_global::nome);
+    query.bindValue(":email", variavel_global::email);
+    query.bindValue(":senha", variavel_global::senha);
+    query.bindValue(":telefone", variavel_global::telefone);
+    query.bindValue(":cpf", variavel_global::cpf);
+    query.bindValue(":tipo_usuario", variavel_global::tipoStr);
+
+    if (!query.exec()) {
+        //qDebug() << "Erro ao inserir no banco de dados:" << query.lastError().text();
+        QMessageBox::critical(this, "Erro", "Não foi possível cadastrar o usuário.");
+    } else {
+        QMessageBox::information(this, "Sucesso", "Usuário cadastrado com sucesso.");
         variavel_global::logado = true;
         usuario user;
         this->close();
         user.exec();
-    }
-    else{
-        QMessageBox::critical(this,"Cadastro inválido","Seus dados não foram cadastrados");
     }
 }
 
