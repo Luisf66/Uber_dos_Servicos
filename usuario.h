@@ -36,6 +36,8 @@ private slots:
 
     void on_btn_endereco_clicked();
 
+    void on_btn_salvar_endereco_clicked();
+
 private:
     Ui::usuario *ui;
 };

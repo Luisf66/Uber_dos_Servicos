@@ -154,3 +154,20 @@ void usuario::on_btn_endereco_clicked()
     ui->stackedWidget->setCurrentIndex(2);
 }
 
+
+void usuario::on_btn_salvar_endereco_clicked()
+{
+    QString nome_rua = ui->campo_nome_rua->text();
+    QString sigla_estado = ui->campo_nome_estado->text();
+    QString bairro = ui->campo_nome_bairro->text();
+    QString cidade = ui->campo_nome_cidade->text();
+    QString numero_casa = ui->campo_numero_casa->text();
+    QString cep = ui->campo_cep->text();
+    qDebug() << nome_rua;
+    qDebug() <<sigla_estado;
+    qDebug() << bairro;
+    qDebug() << cidade;
+    qDebug() << numero_casa;
+    qDebug() << cep;
+}
+
