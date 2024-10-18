@@ -18,6 +18,8 @@ public:
 private slots:
     void on_btn_menu_usuario_clicked();
 
+    void on_btn_menu_usuario_2_clicked();
+
 private:
     Ui::servico *ui;
 };

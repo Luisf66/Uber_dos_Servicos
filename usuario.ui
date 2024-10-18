@@ -416,8 +416,7 @@ border-radius:30px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background:rgb(22, 0, 77);
-</string>
+     <string notr="true"/>
     </property>
     <property name="currentIndex">
      <number>3</number>

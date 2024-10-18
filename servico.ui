@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(66, 66, 66);</string>
+    <string notr="true">background-color:white;</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::Shape::StyledPanel</enum>
@@ -42,11 +42,11 @@
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-   background:rgb(55, 158, 255);
-    color: white;               /* Cor do texto: branco */
+   background:rgb(0, 255, 0);
+    color: black;               /* Cor do texto: branco */
     font-family: &quot;Times New Roman&quot;;  /* Fonte formal */
     font-size: 18px;            /* Tamanho da fonte */
-    font-weight: bold;          /* Negrito para destacar o texto */
+    
     border-radius: 15px;        /* Borda arredondada */
 }
 
@@ -75,11 +75,11 @@ QPushButton:pressed {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-   background:rgb(55, 158, 255);
-    color: white;               /* Cor do texto: branco */
+   background:rgb(0, 255, 0);
+    color: black;               /* Cor do texto: branco */
     font-family: &quot;Times New Roman&quot;;  /* Fonte formal */
     font-size: 18px;            /* Tamanho da fonte */
-    font-weight: bold;          /* Negrito para destacar o texto */
+    
     border-radius: 15px;        /* Borda arredondada */
 }
 
@@ -108,11 +108,11 @@ QPushButton:pressed {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-   background:rgb(55, 158, 255);
-    color: white;               /* Cor do texto: branco */
+   background:rgb(0, 255, 0);
+    color: black;               /* Cor do texto: branco */
     font-family: &quot;Times New Roman&quot;;  /* Fonte formal */
     font-size: 18px;            /* Tamanho da fonte */
-    font-weight: bold;          /* Negrito para destacar o texto */
+    
     border-radius: 15px;        /* Borda arredondada */
 }
 
@@ -141,11 +141,11 @@ QPushButton:pressed {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-   background:rgb(55, 158, 255);
-    color: white;               /* Cor do texto: branco */
+   background:rgb(0, 255, 0);
+    color: black;               /* Cor do texto: branco */
     font-family: &quot;Times New Roman&quot;;  /* Fonte formal */
     font-size: 18px;            /* Tamanho da fonte */
-    font-weight: bold;          /* Negrito para destacar o texto */
+    
     border-radius: 15px;        /* Borda arredondada */
 }
 
@@ -174,11 +174,11 @@ QPushButton:pressed {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-   background:rgb(55, 158, 255);
-    color: white;               /* Cor do texto: branco */
+   background:rgb(0, 255, 0);
+    color: black;               /* Cor do texto: branco */
     font-family: &quot;Times New Roman&quot;;  /* Fonte formal */
     font-size: 18px;            /* Tamanho da fonte */
-    font-weight: bold;          /* Negrito para destacar o texto */
+    
     border-radius: 15px;        /* Borda arredondada */
 }
 
@@ -207,11 +207,11 @@ QPushButton:pressed {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-   background:rgb(55, 158, 255);
-    color: white;               /* Cor do texto: branco */
+   background:rgb(0, 255, 0);
+    color: black;               /* Cor do texto: branco */
     font-family: &quot;Times New Roman&quot;;  /* Fonte formal */
     font-size: 18px;            /* Tamanho da fonte */
-    font-weight: bold;          /* Negrito para destacar o texto */
+    
     border-radius: 15px;        /* Borda arredondada */
 }
 
@@ -240,11 +240,11 @@ QPushButton:pressed {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-   background:rgb(55, 158, 255);
-    color: white;               /* Cor do texto: branco */
+   background:rgb(0, 255, 0);
+    color: black;               /* Cor do texto: branco */
     font-family: &quot;Times New Roman&quot;;  /* Fonte formal */
     font-size: 18px;            /* Tamanho da fonte */
-    font-weight: bold;          /* Negrito para destacar o texto */
+    
     border-radius: 15px;        /* Borda arredondada */
 }
 
@@ -262,107 +262,81 @@ QPushButton:pressed {
      <string>Cancelar</string>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QFrame" name="frame_3">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>241</width>
-      <height>51</height>
+      <x>40</x>
+      <y>40</y>
+      <width>181</width>
+      <height>61</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QPushButton" name="btn_menu_servico">
-       <property name="styleSheet">
-        <string notr="true">#btn_menu_servico{
+    <property name="styleSheet">
+     <string notr="true"> background:rgb(0, 255, 0);
+border-radius:30px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="btn_menu_usuario">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>51</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#btn_menu_usuario{
 	background: transparent;
 	border-radius: 30px;
 }</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="recursos.qrc">
-         <normaloff>:/imagem/imagens/menu_servico.png</normaloff>:/imagem/imagens/menu_servico.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>30</width>
-         <height>30</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="menu_servico">
-       <property name="styleSheet">
-        <string notr="true">	font-family: &quot;Times New Roman&quot;;
-    font-size: 25px;  /* Tamanho da fonte ajustado para um visual mais formal */
-    font-weight: bold; /* Pode adicionar para destacar o texto */
-    color:white; </string>
-       </property>
-       <property name="text">
-        <string>Menu Serviços</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignmentFlag::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>70</y>
-      <width>241</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <item>
-      <widget class="QPushButton" name="btn_menu_usuario">
-       <property name="styleSheet">
-        <string notr="true">#btn_menu_usuario{
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset theme="emblem-shared"/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>35</width>
+       <height>35</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_menu_servico">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>15</y>
+       <width>51</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#btn_menu_servico{
 	background: transparent;
 	border-radius: 30px;
 }</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="recursos.qrc">
-         <normaloff>:/imagem/imagens/menu_usuario.png</normaloff>:/imagem/imagens/menu_usuario.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>35</width>
-         <height>35</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="menu_usuario">
-       <property name="styleSheet">
-        <string notr="true">	font-family: &quot;Times New Roman&quot;;
-    font-size: 25px;  /* Tamanho da fonte ajustado para um visual mais formal */
-    font-weight: bold; /* Pode adicionar para destacar o texto */
-    color:black; </string>
-       </property>
-       <property name="text">
-        <string>Menu Usuário</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignmentFlag::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-    </layout>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset theme="applications-development"/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QStackedWidget" name="stackedWidget">
@@ -435,8 +409,6 @@ QPushButton:pressed {
    <widget class="QWidget" name="page_3"/>
   </widget>
  </widget>
- <resources>
-  <include location="recursos.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
