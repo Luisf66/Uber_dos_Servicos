@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>994</width>
-    <height>589</height>
+    <width>992</width>
+    <height>586</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,9 @@
 	font-size: 24px;
 }
 #centralwidget{
-background: url(:/imagem/imagens/fundo_login_1.jpeg) no-repeat center center fixed;
+color:white;
+}
+/*background: url(:/imagem/imagens/fundo_login_1.jpeg) no-repeat center center fixed;
 }
 
 </string>
@@ -28,10 +30,10 @@ background: url(:/imagem/imagens/fundo_login_1.jpeg) no-repeat center center fix
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>60</y>
-      <width>701</width>
-      <height>461</height>
+      <x>10</x>
+      <y>10</y>
+      <width>971</width>
+      <height>571</height>
      </rect>
     </property>
     <property name="font">
@@ -59,7 +61,7 @@ background: url(:/imagem/imagens/fundo_login_1.jpeg) no-repeat center center fix
     <widget class="QLabel" name="login_2">
      <property name="geometry">
       <rect>
-       <x>30</x>
+       <x>40</x>
        <y>110</y>
        <width>371</width>
        <height>31</height>
@@ -70,12 +72,13 @@ background: url(:/imagem/imagens/fundo_login_1.jpeg) no-repeat center center fix
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel{
+	font: 20pt &quot;Segoe Script&quot;;
 	background: transparent;
 	color:white;
 }</string>
      </property>
      <property name="text">
-      <string>LOGIN</string>
+      <string>Helper Hub</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -84,22 +87,28 @@ background: url(:/imagem/imagens/fundo_login_1.jpeg) no-repeat center center fix
     <widget class="QPushButton" name="btn_login">
      <property name="geometry">
       <rect>
-       <x>110</x>
+       <x>120</x>
        <y>330</y>
        <width>211</width>
-       <height>41</height>
+       <height>51</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">QPushButton{
-	background:rgb(55, 158, 255);
-	color:white;
-	border-radius:15px;
+      <string notr="true">QPushButton {
+   background:rgb(0, 255, 0);
+    color: white;               /* Cor do texto: branco */
+	font: 18pt &quot;Times New Roman&quot;;
+    border-radius: 15px;        /* Borda arredondada */
 }
+
 QPushButton:hover {
-	color:#333;
-	border-radius:15px;
-	background:white;
+    background-color: #007bff;  /* Cor do fundo quando o mouse está sobre o botão: azul claro */
+    color: #333333;             /* Cor do texto ao passar o mouse: cinza escuro */
+}
+
+QPushButton:pressed {
+    background-color: #003366;  /* Cor do botão ao ser pressionado: azul ainda mais escuro */
+    color: #ffffff;             /* Cor do texto ao ser pressionado: branco */
 }</string>
      </property>
      <property name="text">
@@ -109,9 +118,9 @@ QPushButton:hover {
     <widget class="QLineEdit" name="campo_usuario">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>20</x>
        <y>180</y>
-       <width>351</width>
+       <width>401</width>
        <height>41</height>
       </rect>
      </property>
@@ -126,6 +135,9 @@ QPushButton:hover {
      <property name="text">
       <string/>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
      <property name="placeholderText">
       <string>Usuário</string>
      </property>
@@ -133,9 +145,9 @@ QPushButton:hover {
     <widget class="QLineEdit" name="campo_senha">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>20</x>
        <y>269</y>
-       <width>351</width>
+       <width>401</width>
        <height>41</height>
       </rect>
      </property>
@@ -153,6 +165,9 @@ QPushButton:hover {
      <property name="echoMode">
       <enum>QLineEdit::EchoMode::Password</enum>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
      <property name="placeholderText">
       <string>Senha</string>
      </property>
@@ -160,8 +175,8 @@ QPushButton:hover {
     <widget class="QPushButton" name="btn_cadastro">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>400</y>
+       <x>50</x>
+       <y>460</y>
        <width>171</width>
        <height>20</height>
       </rect>
@@ -181,8 +196,8 @@ QPushButton:hover {
     <widget class="QPushButton" name="btn_recuperar_senha">
      <property name="geometry">
       <rect>
-       <x>230</x>
-       <y>400</y>
+       <x>250</x>
+       <y>460</y>
        <width>151</width>
        <height>20</height>
       </rect>
@@ -202,10 +217,10 @@ QPushButton:hover {
     <widget class="QFrame" name="frame_2">
      <property name="geometry">
       <rect>
-       <x>410</x>
+       <x>450</x>
        <y>10</y>
-       <width>281</width>
-       <height>441</height>
+       <width>511</width>
+       <height>551</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -221,7 +236,7 @@ QPushButton:hover {
     <widget class="QToolButton" name="toolButton">
      <property name="geometry">
       <rect>
-       <x>180</x>
+       <x>190</x>
        <y>30</y>
        <width>71</width>
        <height>61</height>
